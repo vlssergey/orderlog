@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <sales>
+            <groups>
+                <orderlog translate="label" module="orderlog">
+                    <label>Order log</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable translate="label" module="orderlog">
+                            <label>Loging Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable>
+                        <decimal_factor translate="label,comment" module="orderlog">
+                            <label>Decimal Factor</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <validate>validate-number</validate>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Total sum multiplied by a decimal factor. Number validation]]></comment>
+                        </decimal_factor>
+                        <order_status translate="label">
+                            <label>Apply if order status</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_order_status</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </order_status>
+                        <add_comment translate="label" module="orderlog">
+                            <label>Add comments to order</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </add_comment>
+                    </fields>
+                </orderlog>
+            </groups>
+        </sales>
+    </sections>
+</config>
